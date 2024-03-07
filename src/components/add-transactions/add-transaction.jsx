@@ -15,16 +15,16 @@ const TransactionForm = ({onClose, isOpen}) => {
                     <ModalBody>
                         <FormControl>
                             <FormLabel>Enter Description</FormLabel>
-                            <Input placeholder="Enter Transaction Amount" name="description" type="text" value="description" />
+                            <Input placeholder="Enter Transaction Amount" name="description" type="text" value="" />
                         </FormControl>
 
                         <FormControl>
                             <FormLabel>Enter Amount</FormLabel>
-                            <Input placeholder="Enter Transaction Description" name="amount" type="number" value="amount" />
+                            <Input placeholder="0.00" name="amount" type="number" value="" />
                         </FormControl>
 
                         <RadioGroup mt={'5'} >
-                            <Radio value="income" colorScheme="blue" name="type">Income</Radio>
+                            <Radio mr={'4'} value="income" colorScheme="blue" name="type">Income</Radio>
                             <Radio value="expense" colorScheme="red" name="type">Expense</Radio>
                         </RadioGroup>
                     </ModalBody>
