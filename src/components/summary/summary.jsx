@@ -30,7 +30,6 @@ const Summary = ({ onClose, isOpen }) => {
                     <Heading>
                         <ChartSummary expense={100} income={1000} />
                     </Heading>
-
                 </Box>
             </Flex>
             <TransactionForm onClose={onClose} isOpen={isOpen} />
