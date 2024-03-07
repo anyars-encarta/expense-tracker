@@ -1,7 +1,8 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/layout"
 import TransactionForm from "../add-transactions/add-transaction";
+import ChartSummary from "../chart/chart";
 
-const Summary = ({onClose, isOpen}) => {
+const Summary = ({ onClose, isOpen }) => {
     return (
         <Box display={'flex'} p={'6'} border={'1px solid'} borderColor={'gray.100'} overflow={'hidden'} borderRadius={'10'} background={'white'}>
             <Flex w={'full'} justifyContent={'center'} alignItems={'center'} flexDirection={{ base: 'column', sm: 'column', md: 'column', lg: 'row', xl: 'row' }}>
@@ -26,10 +27,13 @@ const Summary = ({onClose, isOpen}) => {
                 </Flex>
 
                 <Box flex={1} mt={'10'} ml={'-90px'} mr={'5'} w={'300px'} h={'300px'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
-                    <Heading>Chart</Heading>
+                    <Heading>
+                        <ChartSummary expense={100} income={1000} />
+                    </Heading>
+
                 </Box>
             </Flex>
-            <TransactionForm onClose={onClose} isOpen={isOpen}/>
+            <TransactionForm onClose={onClose} isOpen={isOpen} />
         </Box>
     )
 };
