@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Container, Flex } from '@chakra-ui/layout';
+import Main from './components/main/main';
 
 const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container bg={'#f8fafd'} maxW={'Container.3xl'} height={'100vh'} p={'0'}>
+      <Flex height={'full'}>
+        <Box height={'full'} flex={5} w={['20%', '30%', '20%', '50%', '60%']}>
+          <Main />
+        </Box>
+      </Flex>
+    </Container>
   );
 }
 
