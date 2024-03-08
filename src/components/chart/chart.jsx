@@ -15,10 +15,10 @@ const options = {
     },
   },
   legend: {
-    show: false,
+    show: true,
   },
   dataLabels: {
-    enabled: false,
+    enabled: true,
   },
   hover: { mode: null },
   plotOptions: {
