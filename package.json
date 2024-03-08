@@ -3,6 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/button": "^2.1.0",
+    "@chakra-ui/form-control": "^2.2.0",
+    "@chakra-ui/hooks": "^2.2.1",
+    "@chakra-ui/input": "^2.1.2",
+    "@chakra-ui/layout": "^2.3.1",
+    "@chakra-ui/modal": "^2.3.1",
+    "@chakra-ui/provider": "^2.4.2",
+    "@chakra-ui/radio": "^2.1.2",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
@@ -10,6 +18,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "framer-motion": "^11.0.8",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
     "react-dom": "^18.2.0",
@@ -40,5 +49,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/eslint-parser": "^7.23.10",
+    "@babel/plugin-syntax-jsx": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
   }
 }

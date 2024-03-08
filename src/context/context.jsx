@@ -1,42 +1,49 @@
-import { createContext, useState } from "react";
+import PropTypes from 'prop-types';
+import { createContext, useState } from 'react';
 
 export const GlobalContext = createContext(null);
 
 const GlobalState = ({ children }) => {
-    const [formData, setFormData] = useState({
-        type: 'income',
-        amount: 0,
-        description: ''
-    });
+  const [formData, setFormData] = useState({
+    type: 'income',
+    amount: 0,
+    description: '',
+  });
 
-    const [value, setValue] = useState('expense');
-    const [totalExpense, setTotalExpense] = useState(0);
-    const [totalIncome, setTotalIncome] = useState(0);
-    const [allTransactions, setAllTransactions] = useState([]);
+  const [value, setValue] = useState('expense');
+  const [totalExpense, setTotalExpense] = useState(0);
+  const [totalIncome, setTotalIncome] = useState(0);
+  const [allTransactions, setAllTransactions] = useState([]);
 
-    const handleFormSubmit = (currentFormData) => {
-        if (!currentFormData.description || !currentFormData.amount) return;
+  const handleFormSubmit = (currentFormData) => {
+    if (!currentFormData.description || !currentFormData.amount) return;
 
-        setAllTransactions([...allTransactions, { ...currentFormData, id: Date.now() }])
-    };
+    setAllTransactions([...allTransactions, { ...currentFormData, id: Date.now() }]);
+  };
 
-    return <GlobalContext.Provider
-        value={{
-            formData,
-            setFormData,
-            totalExpense,
-            setTotalExpense,
-            totalIncome,
-            setTotalIncome,
-            value,
-            setValue,
-            allTransactions,
-            setAllTransactions,
-            handleFormSubmit,
-        }}
+  return (
+    <GlobalContext.Provider
+      value={{
+        formData,
+        setFormData,
+        totalExpense,
+        setTotalExpense,
+        totalIncome,
+        setTotalIncome,
+        value,
+        setValue,
+        allTransactions,
+        setAllTransactions,
+        handleFormSubmit,
+      }}
     >
-        {children}
+      {children}
     </GlobalContext.Provider>
-}
+  );
+};
+
+GlobalState.propTypes = {
+  children: PropTypes.string.isRequired,
+};
 
 export default GlobalState;
