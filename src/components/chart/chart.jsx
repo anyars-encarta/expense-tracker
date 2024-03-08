@@ -1,8 +1,8 @@
 import Chart from 'react-apexcharts';
 
 const options = {
-    labels: ["Expense", "Income"],
-    colors: ["#FD5E53", "#213EBF"],
+    labels: ["Income", "Expense"],
+    colors: ["#213EBF", "#FD5E53"],
     chart: {
         width: "50px",
     },
@@ -31,7 +31,7 @@ const options = {
         },
     },
     fill: {
-        colors: ["#FD5E53", "#213EBF"],
+        colors: ["#213EBF", "#FD5E53"],
     },
     tooltip: {
         enabled: true,
@@ -44,7 +44,7 @@ const options = {
     },
 };
 
-const ChartSummary = ({ expense = 100, income = 100 }) => {
+const ChartSummary = ({ income = 100, expense = 100 }) => {
     return (
         <Chart
             options={options}

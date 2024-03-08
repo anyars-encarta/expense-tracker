@@ -28,7 +28,7 @@ const Summary = ({ onClose, isOpen }) => {
 
                 <Box flex={1} mt={'10'} ml={'-90px'} mr={'5'} w={'300px'} h={'300px'} display={'flex'} alignItems={'center'} justifyContent={'center'}>
                     <Heading>
-                        <ChartSummary expense={100} income={1000} />
+                        <ChartSummary income={1000} expense={100} />
                     </Heading>
                 </Box>
             </Flex>
