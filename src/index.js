@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import { ChakraProvider } from '@chakra-ui/provider';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ChakraProvider } from '@chakra-ui/provider';
 import theme from './theme';
 import GlobalState from './context/context';
 
@@ -13,7 +13,7 @@ root.render(
     <ChakraProvider theme={theme}>
       <App />
     </ChakraProvider>
-  </GlobalState>
+  </GlobalState>,
 );
 
 // If you want to start measuring performance in your app, pass a function
