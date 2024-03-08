@@ -20,8 +20,6 @@ const GlobalState = ({ children }) => {
         setAllTransactions([...allTransactions, { ...currentFormData, id: Date.now() }])
     };
 
-    console.log(allTransactions)
-    
     return <GlobalContext.Provider
         value={{
             formData,
